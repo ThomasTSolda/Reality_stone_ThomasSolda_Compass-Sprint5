@@ -1,7 +1,6 @@
 #language: Portugues
 
-@regression
-@search
+
 Funcionalidade: Busca
     COMO um usúario do Ecommerce ServerestStore
     QUERO poder buscar por diferentes produtos
@@ -10,13 +9,13 @@ Funcionalidade: Busca
   Contexto: Estar na home
     Dado que esteja na home
 
-@search_for_product
+
   Cenário: Buscar por um produto existente
     Dado que esteja na home
     Quando realizar uma busca por um produto existente
     Entao deverão ser retornados resultados na busca
 
-@search_for_different_products
+
   Esquema do Cenário: Buscar por produto existente
     Quando buscar pelo produto "<produto>"
     Entao deverao ser retornados resultados na busca
