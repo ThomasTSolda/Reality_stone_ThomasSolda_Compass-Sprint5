@@ -1,4 +1,4 @@
-#language: Portugues
+#language: pt
 
 
 Funcionalidade: Busca

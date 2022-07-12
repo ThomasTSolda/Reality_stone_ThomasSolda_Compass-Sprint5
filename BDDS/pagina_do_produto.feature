@@ -1,4 +1,4 @@
-#language: Portugues(br)
+#language: pt
 
 
 Funcionalidade: Página do Produto

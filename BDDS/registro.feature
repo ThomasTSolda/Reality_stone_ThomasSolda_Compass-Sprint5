@@ -1,4 +1,4 @@
-#language: Portuguese
+#language: pt
 
 Funcionalidade: Cadastro de usúario
     Como usúario do e-commerce Front - ServerRest

@@ -1,4 +1,4 @@
-#language: Portuguese 
+#language: pt
 
 Funcionalidade: login
     Como usúario do sistema
