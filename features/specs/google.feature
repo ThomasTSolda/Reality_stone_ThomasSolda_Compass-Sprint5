@@ -3,8 +3,8 @@
 Funcionalidade: Google
 
 Cenário: Carregar página do Google
-    Dado que acesse a pagina inicial
-    Então deverá exibir a logo da Google
+    Dado que acesse a home 
+    Entao deverá exibir a logo da Google
 
 Cenário: Buscar por Compass
     Dado que acesse a home
