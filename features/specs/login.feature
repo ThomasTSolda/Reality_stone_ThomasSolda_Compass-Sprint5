@@ -1,38 +1,30 @@
 #language: pt
 @CompleteLogin
+Funcionalidade: Login de usuário
+    Como usuário do e-commerce Front - ServeRest
+    Quero realizar login 
+    Para usar a aplicação
 
-Funcionalidade: realizar login no e-commerce front serverest
-    COMO usuário do ecommerce front serverest
-    QUERO realizar login no e-commerce 
-    PARA poder acessar as funcionalidades do e-commerce front serverest
+    Contexto: 
+        Dado que esteja na tela de login
 
-    Contexto: Estar na tela de login
-        Dado que usuário esteja na tela de login
-
-    Cenário: Logar na aplicação
-    Quando usuário informar login e senha corretos
-    Então o sistema deve permitir a autenticação do usuário
-    
-    Esquema do Cenário: realizar login no sistema com usuários válidos
-        Quando informar um email válido
-        E inserir uma Senha válida
-        Então o sistema deve logar o usuario com sucesso
-        E redirecionar a home
-
-    Exemplos:
-        | email                 | Senha  | mensagem                 |
-        | "Piva@piva.com"       | "0001" | redirecionar a home      |
-        | "Gustavo@gustavo.com" | "0004" | redirecionar a home      |
-        | "Jhonny@jhonny.com"   | "0006" | redirecionar a home      |
-    
-    Esquema do Cenário: realizar login no sistema campos inválidos
-        Quando preencher algum dos campos de login
-        E inserir dados inválidos
-        Então o sistema deve exibir a "<mensagem>"
-
+    Esquema do Cenário: Validar o login de usuários
+        Quando o usuério preencher os campos "<Digite seu email>" e "<Digite sua senha>"
+        Então mensagem é exibida "<msg>"
         Exemplos:
-        | email                 | Senha      | mensagem                            |
-        | ""                    | "0001"     | "Email não pode ficar em branco"    |
-        | "Gustavo@gustavo.com" | ""         | "Password não pode ficar em branco" |
-        | "email@invalido.com"  | "0006"     | "Email deve ser um email válido"    |
-        | "email@valido.com"    | "invalida" | "Email e/ou senha inválidos"        |
+        |Digite seu email      |Digite sua senha |msg                                    |
+        |                      |123456           |Email é obrigatório                    |
+        |thomas@thomas         |123456           |Email deve ser um email válido         |
+        |thomas@thomas.com     |                 |Password não pode ficar em branco      |
+        |thomas@thomas.com     |1234             |Email e/ou senha inválidos             |
+        |thomas@thomas.com     |123456           |                                       |
+                                       
+#
+#    Cenário: fazer login na mesma conta após logout
+#        Dado que esteja na tela de login
+#       Quando o usuário preencher campo "<Digite seu email>" e NÃO preencher campo "<Digite sua senha>"
+#       Então mensagem é exibida "<msg>"
+#       Exemplos:
+#       |Digite seu email      |Digite sua senha |msg                     |
+#       |thomas@thomas.com     |                 |Password é obrigatório  |
+#       |thomas@thomas.com     |                 |Password é obrigatório  |
